@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 
 public class Main {
 
@@ -35,9 +34,9 @@ public class Main {
                     }
                 chessPanel.add(button[i][j]);
                 if ((i % 2 == 0 && j % 2 == 0) || (i % 2 == 1 && j % 2 == 1))
-                    button[i][j].setBackground(Color.BLACK);
+                    button[i][j].setBackground(new Color(0,120,0));
                 else
-                    button[i][j].setBackground(Color.WHITE);
+                    button[i][j].setBackground(new Color(200,255,200));
             }
         frame.setVisible(true);
     }
