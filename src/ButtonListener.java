@@ -6,11 +6,12 @@ import java.awt.event.ActionListener;
 public class ButtonListener implements ActionListener {
     private Ground ground;
     private JButton[][] buttons;
-    private char turn;
+    private static char turn;
 
     public ButtonListener(Ground ground, JButton[][] buttons) {
         this.ground = ground;
         this.buttons = buttons;
+        turn = 'W';
     }
 
 
@@ -29,7 +30,7 @@ public class ButtonListener implements ActionListener {
                     if (e.getSource() == buttons[i][j])
                         for (int k = 0; k < 8; k++)
                             for (int h = 0; h < 8; h++)
-                                if (ground.getGround()[h][k].getX() == i && ground.getGround()[h][k].getY() == j && !ground.getGround()[h][k].getName().equals("   ") ) {
+                                if (ground.getGround()[h][k].getX() == i && ground.getGround()[h][k].getY() == j && !ground.getGround()[h][k].getName().equals("   ") && ground.getGround()[h][k].getName().toCharArray()[0] == turn) {
                                     ground.getGround()[h][k].setSelected(true);
                                     buttons[i][j].setBackground(new Color(54, 75, 0));
                                     for (int f = 0; f < 8; f++)
@@ -52,7 +53,10 @@ public class ButtonListener implements ActionListener {
                                         buttons[i][j].setIcon(ground.getGround()[h][k].getManIcon());
                                         buttons[x][y].setIcon(null);
                                         ground.getGround()[h][k].setSelected(false);
-                                        turn = 'B';
+                                        if (turn == 'W')
+                                            turn = 'B';
+                                        else
+                                            turn = 'W';
                                     } else {
                                         ground.getGround()[h][k].setSelected(false);
                                     }

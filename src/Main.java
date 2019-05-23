@@ -31,22 +31,20 @@ public class Main {
                 for (int k = 0; k < 8; k++)
                     for (int h = 0; h < 8; h++) {
                         if (chess.getGround()[h][k].getX() == i && chess.getGround()[h][k].getY() == j)
-                        button[i][j] = new JButton(chess.getGround()[h][k].getManIcon());
+                            button[i][j] = new JButton(chess.getGround()[h][k].getManIcon());
                     }
                 if ((j % 2 == 0 && i % 2 == 0) || (j % 2 == 1 && i % 2 == 1))
-                    button[i][j].setBackground(new Color(0,120,0));
+                    button[i][j].setBackground(new Color(0, 120, 0));
                 else
-                    button[i][j].setBackground(new Color(200,255,200));
-                button[i][j].addActionListener(new ButtonListener(chess,button));
+                    button[i][j].setBackground(new Color(200, 255, 200));
             }
         for (int i = 0; i < 8; i++)
             for (int j = 0; j < 8; j++) {
                 chessPanel.add(button[j][i]);
             }
-//        while (true){
-//            ButtonListener b = new ButtonListener(chess,button);
-//            frame.setVisible(true);
-//        }
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++)
+                button[i][j].addActionListener(new ButtonListener(chess, button));
         frame.setVisible(true);
     }
 }
