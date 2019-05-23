@@ -124,7 +124,7 @@ public class Pawn extends Man {
                                     this.y = y;
                                     for (int k = 0; k < 8; k++)
                                         for (int h = 0; h < 8; h++) {
-                                            if (ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                            if (ground.getGround()[k][h].getName().equals("BK ") && ground.blackKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                                 ground.getGround()[i][j].setX(x);
                                                 ground.getGround()[i][j].setY(y);
                                                 this.x = x1;
@@ -148,7 +148,7 @@ public class Pawn extends Man {
                                     this.y = y;
                                     for (int k = 0; k < 8; k++)
                                         for (int h = 0; h < 8; h++) {
-                                            if (ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                            if (ground.getGround()[k][h].getName().equals("BK ") && ground.blackKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                                 ground.getGround()[i][j].setX(x);
                                                 ground.getGround()[i][j].setY(y);
                                                 this.x = x1;
@@ -173,7 +173,7 @@ public class Pawn extends Man {
                                     this.y = y;
                                     for (int k = 0; k < 8; k++)
                                         for (int h = 0; h < 8; h++) {
-                                            if (ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                            if (ground.getGround()[k][h].getName().equals("BK ") && ground.blackKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                                 if (knockedMan.toCharArray()[1] == 'Q') {
                                                     ground.getGround()[i][j] = new Queen(x, y, knockedMan);
                                                 } else if (knockedMan.toCharArray()[1] == 'B') {
@@ -202,6 +202,7 @@ public class Pawn extends Man {
         }
         return false;
     }
+
     @Override
     public boolean check(int x, int y, Man[][] ground) {
         if (x >= 0 && x < 8 && y >= 0 && y < 8 && !(this.x == x && this.y == y)) {
@@ -337,7 +338,7 @@ public class Pawn extends Man {
                                     this.y = y;
                                     for (int k = 0; k < 8; k++)
                                         for (int h = 0; h < 8; h++) {
-                                            if (ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                            if (ground.getGround()[k][h].getName().equals("BK ") && ground.blackKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                                 ground.getGround()[i][j].setX(x);
                                                 ground.getGround()[i][j].setY(y);
                                                 this.x = x1;
@@ -364,7 +365,7 @@ public class Pawn extends Man {
                                     this.y = y;
                                     for (int k = 0; k < 8; k++)
                                         for (int h = 0; h < 8; h++) {
-                                            if (ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                            if (ground.getGround()[k][h].getName().equals("BK ") && ground.blackKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                                 ground.getGround()[i][j].setX(x);
                                                 ground.getGround()[i][j].setY(y);
                                                 this.x = x1;
@@ -392,7 +393,7 @@ public class Pawn extends Man {
                                     this.y = y;
                                     for (int k = 0; k < 8; k++)
                                         for (int h = 0; h < 8; h++) {
-                                            if (ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                            if (ground.getGround()[k][h].getName().equals("BK ") && ground.blackKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                                 if (knockedMan.toCharArray()[1] == 'Q') {
                                                     ground.getGround()[i][j] = new Queen(x, y, knockedMan);
                                                 } else if (knockedMan.toCharArray()[1] == 'B') {

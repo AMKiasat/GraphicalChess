@@ -32,7 +32,7 @@ public class Knight extends Man {
                                             this.x = x1;
                                             this.y = y1;
                                             return false;
-                                        }else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                        } else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                             ground.getGround()[i][j].setX(x);
                                             ground.getGround()[i][j].setY(y);
                                             this.x = x1;
@@ -68,8 +68,7 @@ public class Knight extends Man {
                                             this.x = x1;
                                             this.y = y1;
                                             return false;
-                                        }
-                                        else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                        } else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                             if (knockedMan.toCharArray()[1] == 'Q') {
                                                 ground.getGround()[i][j] = new Queen(x, y, knockedMan);
                                             } else if (knockedMan.toCharArray()[1] == 'B') {
@@ -104,6 +103,7 @@ public class Knight extends Man {
             return (this.x + 2 == x && this.y + 1 == y) || (this.x + 1 == x && this.y + 2 == y) || (this.x - 2 == x && this.y + 1 == y) || (this.x - 1 == x && this.y + 2 == y) || (this.x - 2 == x && this.y - 1 == y) || (this.x - 1 == x && this.y - 2 == y) || (this.x + 2 == x && this.y - 1 == y) || (this.x + 1 == x && this.y - 2 == y);
         return false;
     }
+
     @Override
     boolean canMove(int x, int y, Ground ground) {
         if (x >= 0 && x < 8 && y >= 0 && y < 8 && !(this.x == x && this.y == y)) {
@@ -126,7 +126,7 @@ public class Knight extends Man {
                                             this.x = x1;
                                             this.y = y1;
                                             return false;
-                                        }else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                        } else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                             ground.getGround()[i][j].setX(x);
                                             ground.getGround()[i][j].setY(y);
                                             this.x = x1;
@@ -167,8 +167,7 @@ public class Knight extends Man {
                                             this.x = x1;
                                             this.y = y1;
                                             return false;
-                                        }
-                                        else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
+                                        } else if (name.toCharArray()[0] == 'W' && ground.getGround()[k][h].getName().equals("WK ") && ground.whiteKingCheck(ground.getGround()[k][h].getX(), ground.getGround()[k][h].getY())) {
                                             if (knockedMan.toCharArray()[1] == 'Q') {
                                                 ground.getGround()[i][j] = new Queen(x, y, knockedMan);
                                             } else if (knockedMan.toCharArray()[1] == 'B') {

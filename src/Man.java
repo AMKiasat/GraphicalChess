@@ -9,6 +9,7 @@ public abstract class Man {
     Icon manIcon;
 
 
+
     public Man(int x, int y, String name) {
         this.y = y;
         this.x = x;
