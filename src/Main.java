@@ -4,6 +4,7 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
+        char turn = 'W';
         Ground chess = new Ground();
         JFrame frame = new JFrame("Elite Chess");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,19 +26,22 @@ public class Main {
         chessPanel.setBackground(Color.WHITE);
         chessPanel.setLayout(new GridLayout(8, 8));
         JButton[][] button = new JButton[8][8];
-        for (int j = 0; j < 8; j++)
-            for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++) {
                 for (int k = 0; k < 8; k++)
                     for (int h = 0; h < 8; h++) {
-                        if (chess.getGround()[k][h].getX() == i && chess.getGround()[k][h].getY() == j)
-                        button[i][j] = new JButton(chess.getGround()[k][h].getManIcon());
+                        if (chess.getGround()[h][k].getX() == i && chess.getGround()[h][k].getY() == j)
+                        button[i][j] = new JButton(chess.getGround()[h][k].getManIcon());
                     }
-                chessPanel.add(button[i][j]);
-                if ((i % 2 == 0 && j % 2 == 0) || (i % 2 == 1 && j % 2 == 1))
+                if ((j % 2 == 0 && i % 2 == 0) || (j % 2 == 1 && i % 2 == 1))
                     button[i][j].setBackground(new Color(0,120,0));
                 else
                     button[i][j].setBackground(new Color(200,255,200));
                 button[i][j].addActionListener(new ButtonListener(chess,button));
+            }
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++) {
+                chessPanel.add(button[j][i]);
             }
 //        while (true){
 //            ButtonListener b = new ButtonListener(chess,button);

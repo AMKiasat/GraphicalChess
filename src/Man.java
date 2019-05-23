@@ -5,14 +5,16 @@ public abstract class Man {
     int x;
     int y;
     String name;
-    Boolean inGame;
+    Boolean selected;
     Icon manIcon;
+
 
     public Man(int x, int y, String name) {
         this.y = y;
         this.x = x;
         this.name = name;
-        inGame = true;
+        selected = false;
+
     }
 
     public int getX() {
@@ -27,8 +29,8 @@ public abstract class Man {
         return name;
     }
 
-    public Boolean getInGame() {
-        return inGame;
+    public Boolean getSelected() {
+        return selected;
     }
 
     public void setX(int x) {
@@ -39,8 +41,8 @@ public abstract class Man {
         this.y = y;
     }
 
-    public void setInGame(Boolean inGame) {
-        this.inGame = inGame;
+    public void setSelected(Boolean selected) {
+        this.selected = selected;
     }
 
     abstract boolean movement(int x, int y, Ground ground);
