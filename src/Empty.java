@@ -16,4 +16,9 @@ public class Empty extends Man {
     boolean check(int x, int y, Man[][] ground) {
         return false;
     }
+
+    @Override
+    boolean canMove(int x, int y, Ground ground) {
+        return false;
+    }
 }

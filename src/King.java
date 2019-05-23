@@ -102,4 +102,8 @@ public class King extends Man {
             return (this.x + 1 == x && this.y + 1 == y) || (this.x + 1 == x && this.y == y) || (this.x + 1 == x && this.y - 1 == y) || (this.x == x && this.y + 1 == y) || (this.x == x && this.y - 1 == y) || (this.x - 1 == x && this.y + 1 == y) || (this.x - 1 == x && this.y == y) || (this.x - 1 == x && this.y - 1 == y);
         return false;
     }
+    @Override
+    boolean canMove(int x, int y, Ground ground) {
+        return false;
+    }
 }

@@ -47,6 +47,8 @@ public abstract class Man {
 
     abstract boolean check(int x, int y, Man[][] ground);
 
+    abstract boolean canMove(int x, int y, Ground ground);
+
     public Icon getManIcon() {
         return manIcon;
     }

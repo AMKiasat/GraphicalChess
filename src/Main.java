@@ -25,11 +25,11 @@ public class Main {
         chessPanel.setBackground(Color.WHITE);
         chessPanel.setLayout(new GridLayout(8, 8));
         JButton[][] button = new JButton[8][8];
-        for (int i = 0; i < 8; i++)
-            for (int j = 0; j < 8; j++) {
+        for (int j = 0; j < 8; j++)
+            for (int i = 0; i < 8; i++) {
                 for (int k = 0; k < 8; k++)
                     for (int h = 0; h < 8; h++) {
-                        if (chess.getGround()[h][k].getX() == i && chess.getGround()[h][k].getY() == j)
+                        if (chess.getGround()[k][h].getX() == i && chess.getGround()[k][h].getY() == j)
                         button[i][j] = new JButton(chess.getGround()[k][h].getManIcon());
                     }
                 chessPanel.add(button[i][j]);
@@ -37,7 +37,12 @@ public class Main {
                     button[i][j].setBackground(new Color(0,120,0));
                 else
                     button[i][j].setBackground(new Color(200,255,200));
+                button[i][j].addActionListener(new ButtonListener(chess,button));
             }
+//        while (true){
+//            ButtonListener b = new ButtonListener(chess,button);
+//            frame.setVisible(true);
+//        }
         frame.setVisible(true);
     }
 }
