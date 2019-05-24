@@ -5,9 +5,9 @@ public class Knight extends Man {
     public Knight(int x, int y, String name) {
         super(x, y, name);
         if (name.toCharArray()[0] == 'W')
-            manIcon = new ImageIcon("chess-knightW.png");
+            manIcon = new ImageIcon("Icons\\chess-knightW.png");
         else if (name.toCharArray()[0] == 'B')
-            manIcon = new ImageIcon("chess-knightB.png");
+            manIcon = new ImageIcon("Icons\\chess-knightB.png");
     }
 
     @Override

@@ -5,9 +5,9 @@ public class Rook extends Man {
     public Rook(int x, int y, String name) {
         super(x, y, name);
         if (name.toCharArray()[0] == 'W')
-            manIcon = new ImageIcon("chess-rookW.png");
+            manIcon = new ImageIcon("Icons\\chess-rookW.png");
         else if (name.toCharArray()[0] == 'B')
-            manIcon = new ImageIcon("chess-rookB.png");
+            manIcon = new ImageIcon("Icons\\chess-rookB.png");
     }
 
     public boolean movement(int x, int y, Ground ground) {

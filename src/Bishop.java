@@ -5,9 +5,9 @@ public class Bishop extends Man {
     public Bishop(int x, int y, String name) {
         super(x, y, name);
         if (name.toCharArray()[0] == 'W')
-            manIcon = new ImageIcon("chess-bishopW.png");
+            manIcon = new ImageIcon("Icons\\chess-bishopW.png");
         else if (name.toCharArray()[0] == 'B')
-            manIcon = new ImageIcon("chess-bishopB.png");
+            manIcon = new ImageIcon("Icons\\chess-bishopB.png");
     }
 
     public boolean movement(int x, int y, Ground ground) {

@@ -7,9 +7,9 @@ public class Pawn extends Man {
     public Pawn(int x, int y, String name) {
         super(x, y, name);
         if (name.toCharArray()[0] == 'W')
-            manIcon = new ImageIcon("chess-pawnW.png");
+            manIcon = new ImageIcon("Icons\\chess-pawnW.png");
         else if (name.toCharArray()[0] == 'B')
-            manIcon = new ImageIcon("chess-pawnB.png");
+            manIcon = new ImageIcon("Icons\\chess-pawnB.png");
 
         if (name.toCharArray()[0] == 'W' && y == 6)
             firstMove = true;

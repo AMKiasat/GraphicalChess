@@ -7,6 +7,9 @@ public class Main {
         char turn = 'W';
         Ground chess = new Ground();
         JFrame frame = new JFrame("Elite Chess");
+        Toolkit kit = Toolkit.getDefaultToolkit();
+        Image img = kit.createImage("Icons\\chess-kingW.png");
+        frame.setIconImage(img);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(10, 10, 1900, 1000);
         JPanel chessPanel = new JPanel();
@@ -30,7 +33,7 @@ public class Main {
         JButton[][] button = new JButton[8][8];
         JButton[] bKnockedMen = new JButton[16];
         JButton[] wKnockedMen = new JButton[16];
-        JLabel a = new JLabel("WHITE'S TURN");
+        JTextArea a = new JTextArea("WHITE'S TURN");
         turnPanel.add(a);
         int b = 0;
         for (int i = 0; i < 2; i++)

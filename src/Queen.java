@@ -5,9 +5,9 @@ public class Queen extends Man {
     public Queen(int x, int y, String name) {
         super(x, y, name);
         if (name.toCharArray()[0] == 'W')
-            manIcon = new ImageIcon("chess-queenW.png");
+            manIcon = new ImageIcon("Icons\\chess-queenW.png");
         else if (name.toCharArray()[0] == 'B')
-            manIcon = new ImageIcon("chess-queenB.png");
+            manIcon = new ImageIcon("Icons\\chess-queenB.png");
     }
 
     public boolean movement(int x, int y, Ground ground) {

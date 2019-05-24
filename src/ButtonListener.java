@@ -93,37 +93,61 @@ public class ButtonListener implements ActionListener {
                 }
             for (int i = 0; i < j; i++) {
                 if (white[i].toCharArray()[1] == 'N')
-                    wKnockedMen[i].setIcon(new ImageIcon("chess-knightW.png"));
+                    wKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-knightW.png"));
                 else if (white[i].toCharArray()[1] == 'P')
-                    wKnockedMen[i].setIcon(new ImageIcon("chess-pawnW.png"));
+                    wKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-pawnW.png"));
                 else if (white[i].toCharArray()[1] == 'Q')
-                    wKnockedMen[i].setIcon(new ImageIcon("chess-queenW.png"));
+                    wKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-queenW.png"));
                 else if (white[i].toCharArray()[1] == 'R')
-                    wKnockedMen[i].setIcon(new ImageIcon("chess-rookW.png"));
+                    wKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-rookW.png"));
                 else if (white[i].toCharArray()[1] == 'B')
-                    wKnockedMen[i].setIcon(new ImageIcon("chess-bishopW.png"));
+                    wKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-bishopW.png"));
             }
             for (int i = 0; i < k; i++) {
                 if (black[i].toCharArray()[1] == 'N')
-                    bKnockedMen[i].setIcon(new ImageIcon("chess-knightB.png"));
+                    bKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-knightB.png"));
                 else if (black[i].toCharArray()[1] == 'P')
-                    bKnockedMen[i].setIcon(new ImageIcon("chess-pawnB.png"));
+                    bKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-pawnB.png"));
                 else if (black[i].toCharArray()[1] == 'Q')
-                    bKnockedMen[i].setIcon(new ImageIcon("chess-queenB.png"));
+                    bKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-queenB.png"));
                 else if (black[i].toCharArray()[1] == 'R')
-                    bKnockedMen[i].setIcon(new ImageIcon("chess-rookB.png"));
+                    bKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-rookB.png"));
                 else if (black[i].toCharArray()[1] == 'B')
-                    bKnockedMen[i].setIcon(new ImageIcon("chess-bishopB.png"));
+                    bKnockedMen[i].setIcon(new ImageIcon("Icons\\chess-bishopB.png"));
             }
+
             if (turn == 'W') {
                 turnPanel.removeAll();
-                JLabel a = new JLabel("WHITE'S TURN");
+                JTextArea a = new JTextArea("WHITE'S TURN");
                 turnPanel.add(a);
             } else {
                 turnPanel.removeAll();
-                JLabel a = new JLabel("BLACK'S TURN");
-                a.setSize(100,100);
+                JTextArea a = new JTextArea("BLACK'S TURN");
                 turnPanel.add(a);
+            }
+            Boolean checkMate = true;
+            for (int i = 0; i < 8; i++)
+                for (j = 0; j < 8; j++) {
+                    if (ground.getGround()[i][j].getName().toCharArray()[0] == turn) {
+                        for (k = 0; k < 8; k++) {
+                            for (int h = 0; h < 8; h++) {
+                                if (ground.getGround()[i][j].canMove(k, h, ground)) {
+                                    checkMate = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            if (checkMate) {
+                turnPanel.removeAll();
+                JTextArea a = new JTextArea("CHECKMATE");
+                JTextArea b;
+                if (turn == 'W')
+                    b = new JTextArea("Black won!");
+                else
+                    b = new JTextArea("White won!");
+                turnPanel.add(a);
+                turnPanel.add(b);
             }
         }
     }
