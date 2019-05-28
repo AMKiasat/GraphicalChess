@@ -1,3 +1,10 @@
+/**
+ * This is a class for the board of the game
+ *
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-1-2019
+ */
 import java.util.ArrayList;
 
 public class Ground {
@@ -68,7 +75,13 @@ public class Ground {
         }
         System.out.println("\n      A   B   C   D   E   F   G   H");
     }
-
+    /**
+     * checks that the x1,y1 position is empty or not
+     *
+     * @param x1 the x of the position
+     * @param y1 the y of the position
+     * @return if it's empty return true otherwise return false
+     */
     public boolean checkEmpty(int x1, int y1) {
         for (int k = 0; k < 8; k++)
             for (int z = 0; z < 8; z++)
@@ -76,7 +89,13 @@ public class Ground {
                     return true;
         return false;
     }
-
+    /**
+     * checks that if the white king was in x,y position, it's checked or not
+     *
+     * @param x the x of the position
+     * @param y the y of the position
+     * @return
+     */
     public boolean whiteKingCheck(int x, int y) {
         ArrayList<Boolean> check = new ArrayList<Boolean>();
         for (int i = 0; i < 8; i++)
@@ -88,7 +107,12 @@ public class Ground {
             }
         return false;
     }
-
+    /**
+     * checks that if the black king was in x,y position, it's checked or not
+     * @param x the x of the position
+     * @param y the y of the position
+     * @return
+     */
     public boolean blackKingCheck(int x, int y) {
         ArrayList<Boolean> check = new ArrayList<Boolean>();
         for (int i = 0; i < 8; i++)
@@ -100,7 +124,10 @@ public class Ground {
             }
         return false;
     }
-
+    /**
+     * adds the name of the knocked man to the list
+     * @param knockedMan the name of the knocked man
+     */
     public void addKnockedChessMan(String knockedMan) {
         knockedChessMan.add(knockedMan);
     }

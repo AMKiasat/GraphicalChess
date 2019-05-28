@@ -1,3 +1,9 @@
+/**
+ * This is an abstract peace for every chessmen
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-15-2019
+ */
 import javax.swing.*;
 
 public abstract class Man {
@@ -45,11 +51,29 @@ public abstract class Man {
     public void setSelected(Boolean selected) {
         this.selected = selected;
     }
-
+    /**
+     *
+     * @param x final x
+     * @param y final y
+     * @param ground the ground which the man moves on
+     * @return true if the move is allowed and move it to x and y otherwise it's false
+     */
     abstract boolean movement(int x, int y, Ground ground);
-
+    /**
+     *
+     * @param x final x
+     * @param y final y
+     * @param ground the array if the all chess mans
+     * @return true if the move is allowed otherwise it's false
+     */
     abstract boolean check(int x, int y, Man[][] ground);
-
+    /**
+     *
+     * @param x final x
+     * @param y final y
+     * @param ground the array if the all chess mans
+     * @return true if the move is allowed otherwise it's false
+     */
     abstract boolean canMove(int x, int y, Ground ground);
 
     public Icon getManIcon() {

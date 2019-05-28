@@ -1,3 +1,9 @@
+/**
+ * This is pawn peace class
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-15-2019
+ */
 import javax.swing.*;
 
 public class Pawn extends Man {

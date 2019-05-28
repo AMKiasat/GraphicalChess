@@ -20,6 +20,10 @@ public class ButtonListener implements ActionListener {
         turn = 'W';
     }
 
+    /**
+     * It make changes to the graphics
+     * @param e it's selected button
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         Boolean selected = false;

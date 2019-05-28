@@ -1,4 +1,9 @@
-import javax.swing.*;
+/**
+ * This is Bishop peace class
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-1-2019
+ */
 
 public class Empty extends Man {
 

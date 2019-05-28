@@ -1,3 +1,9 @@
+/**
+ * This is knight peace class
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-1-2019
+ */
 import javax.swing.*;
 
 public class Knight extends Man {
