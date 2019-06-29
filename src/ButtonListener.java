@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * This is rook peace class
+ * This is a Bottun listener for the ground buttons
  *
  * @author Amir Mojtaba Kiasat
  * @version 1.0
