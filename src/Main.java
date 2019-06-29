@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main {
-
     public static void main(String[] args) {
         char turn = 'W';
         Ground chess = new Ground();
@@ -33,7 +32,8 @@ public class Main {
         JButton[][] button = new JButton[8][8];
         JButton[] bKnockedMen = new JButton[16];
         JButton[] wKnockedMen = new JButton[16];
-        JTextArea a = new JTextArea("WHITE'S TURN");
+        JLabel a = new JLabel();
+        a.setIcon(new ImageIcon("Icons\\W.png"));
         turnPanel.add(a);
         int b = 0;
         for (int i = 0; i < 2; i++)

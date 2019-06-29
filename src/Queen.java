@@ -1,11 +1,12 @@
-/**
- * This is queen peace class
- * @author Amir Mojtaba Kiasat
- * @version 1.0
- * @since 5-1-2019
- */
 import javax.swing.*;
 
+/**
+ * This is queen peace class
+ *
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-15-2019
+ */
 public class Queen extends Man {
 
     public Queen(int x, int y, String name) {

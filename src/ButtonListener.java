@@ -3,6 +3,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This is rook peace class
+ *
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-15-2019
+ */
 public class ButtonListener implements ActionListener {
     private Ground ground;
     private JButton[][] buttons;
@@ -22,6 +29,7 @@ public class ButtonListener implements ActionListener {
 
     /**
      * It make changes to the graphics
+     *
      * @param e it's selected button
      */
     @Override
@@ -122,11 +130,13 @@ public class ButtonListener implements ActionListener {
 
             if (turn == 'W') {
                 turnPanel.removeAll();
-                JTextArea a = new JTextArea("WHITE'S TURN");
+                JLabel a = new JLabel();
+                a.setIcon(new ImageIcon("Icons\\W.png"));
                 turnPanel.add(a);
             } else {
                 turnPanel.removeAll();
-                JTextArea a = new JTextArea("BLACK'S TURN");
+                JLabel a = new JLabel();
+                a.setIcon(new ImageIcon("Icons\\B.png"));
                 turnPanel.add(a);
             }
             Boolean checkMate = true;

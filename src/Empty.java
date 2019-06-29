@@ -1,10 +1,10 @@
 /**
  * This is Bishop peace class
+ *
  * @author Amir Mojtaba Kiasat
  * @version 1.0
- * @since 5-1-2019
+ * @since 5-15-2019
  */
-
 public class Empty extends Man {
 
     public Empty(int x, int y, String name) {

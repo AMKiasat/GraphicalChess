@@ -1,11 +1,12 @@
+import javax.swing.*;
+
 /**
  * This is rook peace class
+ *
  * @author Amir Mojtaba Kiasat
  * @version 1.0
  * @since 5-1-2019
  */
-import javax.swing.*;
-
 public class Rook extends Man {
 
     public Rook(int x, int y, String name) {

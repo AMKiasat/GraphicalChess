@@ -1,11 +1,11 @@
+import javax.swing.*;
 /**
  * This is knight peace class
+ *
  * @author Amir Mojtaba Kiasat
  * @version 1.0
- * @since 5-1-2019
+ * @since 5-15-2019
  */
-import javax.swing.*;
-
 public class Knight extends Man {
 
     public Knight(int x, int y, String name) {

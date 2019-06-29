@@ -1,12 +1,12 @@
+import java.util.ArrayList;
+
 /**
  * This is a class for the board of the game
  *
  * @author Amir Mojtaba Kiasat
  * @version 1.0
- * @since 5-1-2019
+ * @since 5-15-2019
  */
-import java.util.ArrayList;
-
 public class Ground {
 
     private Man[][] ground;
@@ -75,6 +75,7 @@ public class Ground {
         }
         System.out.println("\n      A   B   C   D   E   F   G   H");
     }
+
     /**
      * checks that the x1,y1 position is empty or not
      *
@@ -89,6 +90,7 @@ public class Ground {
                     return true;
         return false;
     }
+
     /**
      * checks that if the white king was in x,y position, it's checked or not
      *
@@ -107,8 +109,10 @@ public class Ground {
             }
         return false;
     }
+
     /**
      * checks that if the black king was in x,y position, it's checked or not
+     *
      * @param x the x of the position
      * @param y the y of the position
      * @return
@@ -124,8 +128,10 @@ public class Ground {
             }
         return false;
     }
+
     /**
      * adds the name of the knocked man to the list
+     *
      * @param knockedMan the name of the knocked man
      */
     public void addKnockedChessMan(String knockedMan) {

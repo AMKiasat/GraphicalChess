@@ -1,11 +1,12 @@
-/**
- * This is king peace class
- * @author Amir Mojtaba Kiasat
- * @version 1.0
- * @since 5-1-2019
- */
 import javax.swing.*;
 
+/**
+ * This is king peace class
+ *
+ * @author Amir Mojtaba Kiasat
+ * @version 1.0
+ * @since 5-15-2019
+ */
 public class King extends Man {
 
     public King(int x, int y, String name) {
